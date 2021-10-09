@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@276;300;400&family=Limelight&display=swap);
+
+* {
+    box-sizing: border-box
+}
+
+:root {
+    --primary-color: #976955;
+}
+
+body {
+    background: #e0c2a5;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar {
+    background: #e8d9c2;
+    padding: 1em;
+
+    section {
+        padding: 10em 4em;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: 0;
+
+        ul {
+            display: flex;
+        }
+
+        a {
+            color: #444444;
+            font-size: 1.2em;
+            padding: .4em 1em;
+        }
+
+        ul.primary-nav {
+            margin: 0;
+            padding-top: 0.5em;
+        }
+
+        ul.secondary-nav a {
+            color: var(--primary-color);
+            border: 3px solid var(--primary-color);
+            font-weight: bold;
+            border-radius: 3em;
+            margin-top: 0;
+
+            &:hover {
+                background: var(--primary-color);
+                color: white;
+            }
+        }
+
+        ul.secondary-nav {
+            padding-top: 0.5em;
+        }
+    }
+
+    .logo {
+        text-decoration: none;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        color: black;
+        font-size: 1.4em;
+        padding: 0.4em;
+
+        span {
+            color: var(--primary-color);
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 180px auto;
+        width: 1080px;
+        margin: 0 auto;
+    }
+
+}
+
+a {
+    color: #444444;
+    text-decoration: none;
+
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+.about-projects {
+
+    h2 {
+        font-size: 3em;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container {
+        position: relative;
+        width: 50%;
+        max-width: 300px;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 35%;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container:hover .overlay {
+        opacity: 1;
+    }
+}
