@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@276;300;400&family=Limelight&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@276;300;400&family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 
 * {
     box-sizing: border-box
@@ -6,15 +7,18 @@
 
 :root {
     --primary-color: #976955;
+    --type-speed: 4s;
+    --type-char: 8;
 }
 
 body {
     background: #e0c2a5;
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-y: hidden;
 }
 
 .navbar {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: #e8d9c2;
     padding: 1em;
 
@@ -142,5 +146,74 @@ section {
 
     .container:hover .overlay {
         opacity: 1;
+    }
+}
+
+.hero {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    min-height: 100vh;
+
+    h1 {
+
+        padding: 0;
+        margin: 0;
+        font-size: 9rem;
+        position: relative;
+
+
+        &::before, 
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &::before{
+            background-color: #e0c2a5;
+            animation: typewriter var(--type-speed) steps(var(--type-char)) 1s forwards;
+        }
+
+        &::after {
+            width: 0.022em;
+            background-color: black;
+            animation: 
+                typewriter var(--type-speed) steps(var(--type-char)) 1s forwards,
+                blink 500ms steps(var(--type-char)) infinite;
+
+        }
+
+        @keyframes typewriter {
+            to {left: 100%}
+        }
+
+        @keyframes blink {
+            to {background: transparent}
+        }
+
+
+        span {
+            color: var(--primary-color);
+        }
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        font-weight: 400;
+        opacity: 0;
+        transform: translateY(3rem);
+        animation: fadeInUp 2s ease calc(var(--type-speed) + 2s) forwards;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
