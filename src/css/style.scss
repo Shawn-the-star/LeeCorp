@@ -111,6 +111,7 @@ section {
 
 .about-projects {
 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     h2 {
         font-size: 3em;
         align-items: center;
@@ -162,7 +163,7 @@ section {
         margin: 0;
         font-size: 9rem;
         position: relative;
-
+        
 
         &::before, 
         &::after {

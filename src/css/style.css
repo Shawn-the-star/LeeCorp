@@ -116,6 +116,10 @@ section {
   padding: 5em 2em;
 }
 
+.about-projects {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .about-projects h2 {
   font-size: 3em;
   -webkit-box-align: center;
